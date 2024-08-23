@@ -1,7 +1,7 @@
 ﻿namespace Catalog.API.Products.CreateProduct;
 using Microsoft.AspNetCore.Routing;
 
-public record CreateProductRequest(string Name, List<string> Category, string Description, string FileName, decimal price);
+public record CreateProductRequest(string Name, List<string> Category, string Description, string FileName, decimal Price);
 
 public record CreateProductResponse(Guid Id);
 
