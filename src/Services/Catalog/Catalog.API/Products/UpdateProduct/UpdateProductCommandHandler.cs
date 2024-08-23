@@ -5,6 +5,16 @@
 
     public record UpdateProductResult(bool IsSuccess);
 
+    public class UpdateProductCommandValidator : AbstractValidator<UpdateProductCommand>
+    {
+        public UpdateProductCommandValidator()
+        {
+            RuleFor(x => x.Id).NotEmpty().WithMessage("Product Id is required");
+            RuleFor(x => x.Name).NotEmpty().WithMessage("Name is required").Length(1, 155).WithMessage("Name length is allowed between 1 to 155");
+            RuleFor(x => x.ImageFile).NotEmpty().WithMessage("Image file is required");
+            RuleFor(x => x.Price).GreaterThan(0).WithMessage("Price should be greater than 0");
+        }
+    }
     internal class UpdateProductCommandHandler(IDocumentSession session, ILogger<UpdateProductCommandHandler> logger)
         : ICommandHandler<UpdateProductCommand, UpdateProductResult>
     {
