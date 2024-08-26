@@ -7,13 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{77
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{563B40CA-5A54-4F6F-817E-150862241B0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{A5AD1429-C058-47B3-96D3-AAAC8CB48857}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{A5AD1429-C058-47B3-96D3-AAAC8CB48857}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{1BF07E64-6D58-4131-AD89-29F2D19E1AFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks", "BuildingBlocks\BuildingBlocks\BuildingBlocks.csproj", "{671DF9F4-1829-4EBE-895B-41AFD7F1CBFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks", "BuildingBlocks\BuildingBlocks\BuildingBlocks.csproj", "{671DF9F4-1829-4EBE-895B-41AFD7F1CBFE}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{318244CC-E70A-4780-9B0D-115C5F530C86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{89CAD435-9F2B-4DBE-AC6A-F817D5BCC3EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.API", "Services\Basket\Basket.API\Basket.API.csproj", "{AB61E105-1C3F-4EAE-BA7E-C47DAAEB3966}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,10 @@ Global
 		{318244CC-E70A-4780-9B0D-115C5F530C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{318244CC-E70A-4780-9B0D-115C5F530C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{318244CC-E70A-4780-9B0D-115C5F530C86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB61E105-1C3F-4EAE-BA7E-C47DAAEB3966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB61E105-1C3F-4EAE-BA7E-C47DAAEB3966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB61E105-1C3F-4EAE-BA7E-C47DAAEB3966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB61E105-1C3F-4EAE-BA7E-C47DAAEB3966}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +49,8 @@ Global
 		{563B40CA-5A54-4F6F-817E-150862241B0F} = {77AD32CE-F425-438F-9C5D-57A864325F1B}
 		{A5AD1429-C058-47B3-96D3-AAAC8CB48857} = {563B40CA-5A54-4F6F-817E-150862241B0F}
 		{671DF9F4-1829-4EBE-895B-41AFD7F1CBFE} = {1BF07E64-6D58-4131-AD89-29F2D19E1AFB}
+		{89CAD435-9F2B-4DBE-AC6A-F817D5BCC3EF} = {77AD32CE-F425-438F-9C5D-57A864325F1B}
+		{AB61E105-1C3F-4EAE-BA7E-C47DAAEB3966} = {89CAD435-9F2B-4DBE-AC6A-F817D5BCC3EF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C7EFCE4-4D7C-41AF-9EB1-BFAEB4C8BA87}
