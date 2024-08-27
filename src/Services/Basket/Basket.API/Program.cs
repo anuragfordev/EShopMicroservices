@@ -35,9 +35,18 @@ builder.Services.AddStackExchangeRedisCache(options =>
 });
 
 // Grpc services
-builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(options => 
+//** only for devlopment purpose, should not be used in production to avoid SSL certificate requirement
+builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(options =>
 {
     options.Address = new Uri(builder.Configuration["GrpcSettings:DiscountUrl"]!);
+})
+.ConfigurePrimaryHttpMessageHandler(() =>
+{
+    var handler = new HttpClientHandler
+    {
+        ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+    };
+    return handler;
 });
 
 // Cross-cutting services
